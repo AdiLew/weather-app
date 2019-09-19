@@ -13,7 +13,8 @@ const forecast = (lat, lon, callback) => {
         }
         else {
             const {temperature, precipProbability, humidity} = body.currently,
-                currentForecast = `${body.daily.data[0].summary} It is currently ${temperature} degrees out. There is a ${precipProbability * 100}% chance of rain and ${humidity*100}% humidity.`;
+                {summary: dailySummary, precipType = 'rain'} = body.daily.data[0],
+                currentForecast = `${dailySummary} It is currently ${temperature} degrees out. There is a ${precipProbability * 100}% chance of ${precipType} and ${humidity*100}% humidity.`;
             callback(undefined, currentForecast)
         }
     })
