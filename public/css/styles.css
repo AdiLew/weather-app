@@ -1,0 +1,21 @@
+body{
+    display:flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+.wrapper{
+    flex-grow:1;
+}
+
+footer{
+    padding: 10px 0;
+    
+}
+input, form{
+    flex-grow: 0.7
+}
+#forecast-content{
+    margin-top:50px;
+   
+}

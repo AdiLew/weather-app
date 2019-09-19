@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+    {{>headCss}}
+
+</head>
+
+<body>
+    <div class="wrapper">
+        {{>navbar}}
+        {{>header}}
+        <div class="container">
+            <div class="row mb-2  justify-content-center">
+
+                <div class="col-md-auto">
+                    <p class="h4">Search for the weather in your area!</p>
+                </div>
+            </div>
+            <div class="row  justify-content-center">
+                <form class="form-inline justify-content-center">
+                    <input class="form-control mb-2 mx-sm-3" type="text" id="search-term" placeholder="Tel Aviv">
+                    <button class="btn btn-dark mb-2">Search</button>
+                </form>
+            </div>
+            <div class="row">
+                <div class="container" id="forecast-content">
+                    <div class="row justify-content-center">
+                        <p class="h6" id="message-1"></p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <p id="message-2"></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
