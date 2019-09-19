@@ -19,3 +19,7 @@ input, form{
     margin-top:50px;
    
 }
+.my-name{
+    font-weight:600;
+    font-style: italic;
+}
